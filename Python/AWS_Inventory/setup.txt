@@ -1,0 +1,48 @@
+Prerequisites
+    - python3
+    - pip
+    - AWS credentials
+        aws_access_key_id,
+        aws_secret_access_key,
+        aws_session_token
+      at ~/.aws/credentials
+
+Setup
+    - Python Virtual Environment (Preferred)
+        - Create Virtual Environment 
+            python3 -m venv .venv
+        - Activate virtual environment
+            Windows: .venv/Scripts/activate
+            Linux/MacOS: source .venv/bin/activate
+    - Install dependencies
+        pip install -r requirements.txt
+
+
+Running the script
+    python3 main.py
+
+    Input the resources that you want to extract. Enter as mentioned in the prompt.
+    For multiple resources, input the resources followed by space.
+        "s3 ec2 vpc ss"
+    
+    Input the limit for the resources to highlight. Resources older than mentioned days will be highlighted in excel sheet.
+
+    Output is located as AWS_Report/report.xlsx
+
+Resources to extract
+    s3 -> S3 Bucket
+    ec2 -> EC2 Instance
+    vpc -> vpc
+    volume -> EBS Volumes
+    ami -> AMIs owned by the user
+    ss -> Snapshots owned by the user
+
+Contributing to the script
+    Define a function within the class
+    Map the function to its keyword at funcDict in Constructor
+
+
+
+
+
+
